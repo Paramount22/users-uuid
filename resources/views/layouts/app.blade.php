@@ -64,6 +64,14 @@
                                         {{ __('My profile') }}
                                     </a>
 
+                                    <a class="dropdown-item" href="{{ route('user.posts', Auth::user()->uuid) }}">
+                                        {{ __('My posts') }}
+                                    </a>
+
+                                    <a class="dropdown-item" href="{{ route('user.comments', Auth::user()->uuid) }}">
+                                        {{ __('My comments') }}
+                                    </a>
+
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

@@ -5,7 +5,9 @@
         <div class="col-md-8">
             <header class="d-flex justify-content-between align-items-center mb-4">
                 <h2>
-                    <span class="lead">comments by</span>
+                   
+                        <span class="lead">comments by</span>
+
                     {{$user->name}}
                 </h2>
 
@@ -23,7 +25,8 @@
                     <div class="card-header d-flex justify-content-between">
                         <a href="{{route('user.comments', $comment->user)}}">{{$comment->user->name}}</a>
                         <span>
-                            post: <a href="{{route('posts.show', $comment->post)}}">{{$comment->post->title}}</a>
+                            post: <a class="text-info" href="{{route('posts.show', $comment->post)
+                            }}">{{$comment->post->title}}</a>
                         </span>
                     </div>
 

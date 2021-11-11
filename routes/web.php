@@ -17,12 +17,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [PostController::class, 'index']);
+
+
 Route::get('users/{user}/comments', [UserController::class, 'showUserComments'])->name('user.comments');
 Route::get('users/{user}/my-profile', [UserController::class, 'userProfile'])->name('user.profile');
+Route::get('users/{user}/posts', [UserController::class, 'userPosts'])->name('user.posts');
+
 
 Route::resource('users', UserController::class);
 Route::resource('posts', PostController::class);
-Route::resource('comments', CommentController::class);
+
 
 
 Auth::routes();

@@ -107,4 +107,16 @@ class UserController extends Controller
             'commentsCount' => Comment::where('user_id', $user->id)->count()
         ]);
     }
+
+    /**
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View
+     */
+    public function userPosts()
+    {
+        return view('users.posts', [
+            'userPosts' => auth()->user()->posts
+        ]);
+    }
+
+
 }
